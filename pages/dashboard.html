@@ -1,0 +1,99 @@
+<header ng-include="'pages/component/header.html'"></header>
+
+<section class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="title">
+          <h3>Olá {{ user.name }}</h3>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <div class="col-md-2">
+          <footer ng-include="'pages/component/menu.html'"></footer>
+        </div>
+
+        <div class="col-md-6">
+          <div class="page">
+            <div class="title">
+              <h4>Resultados <span class="pull-right">{{ report.dt_start }} à {{ report.dt_end }}</span></h4>
+            </div>
+
+            <div class="area">
+              <div class="table-responsive">
+              <table class="table table-hover">
+                <tbody>
+                  <tr>
+                    <td><b>Jogos disputados</b></td>
+                    <td class="result">{{ report.games_played }}</td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Total de pontos marcados na temporada</b></td>
+                    <td class="result"><span class="label label-primary label-record" ng-if="report.scored_played > 100">Uau!</span> {{ report.scored_played }}</td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Média de pontos por jogo</b></td>
+                    <td class="result">{{ roundMedia(report.media_score)  }}</td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Maior pontuação em um jogo</b></td>
+                    <td class="result">{{ report.highest_score}}</td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Menor pontuação em um jogo</b></td>
+                    <td class="result">{{ report.lowest_score}}</td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Quantidade de vezes que bateu o próprio recorde</b></td>
+                    <td class="result">{{ records_point }}</td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="page">
+            <div class="title">
+              <h4>Pontos</h4>
+            </div>
+
+            <div class="area">
+              <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <th>Jogo</th>
+                  <th class="text-center">Pontos</th>
+                </thead>
+                <tbody>
+                  <tr ng-class="{'trophy': point.record == true} " ng-repeat="point in points">
+                    <td>{{ formatDate(point.date) }}</td>
+                    <td class="text-center">
+                      {{ point.point }}
+                      <span ng-if="point.record">
+                        <i class="fa fa-trophy"></i>
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<footer ng-include="'pages/component/footer.html'"></footer>
