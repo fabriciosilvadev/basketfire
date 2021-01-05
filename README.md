@@ -19,3 +19,7 @@ Editar o arquivo bootstrap.php:
 > Ajustar os dados do banco de dados nas linhas 33 a 36 (Produção) ou 45 a 48 (Desenvolvimento).
 
 Executar o Frontend em um servidor Apache/Nginx.
+
+Banco de Dados
+
+> O arquivo db.sql se encontra no caminho '/backend/database/db.sql'
