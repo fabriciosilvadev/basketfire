@@ -17,8 +17,9 @@ body {
 
 .header .navbar-brand img{
 	-webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
+	-moz-animation:spin 4s linear infinite;
+	animation:spin 4s linear infinite;
+	height: 30px;
 }
 
 .header .navbar-header .logo-text{
@@ -130,7 +131,8 @@ body {
 
 .login .side .logo .logo-img{
 	float: left;
-	width: 38px
+	width: 38px;
+	height:30px;
 }
 
 .login .side .logo .logo-img img{

@@ -78,6 +78,7 @@
                 <thead>
                   <th>Jogo</th>
                   <th class="text-center">Pontos</th>
+                  <th>Ações</th>
                 </thead>
                 <tbody>
                   <tr ng-class="{'trophy': point.record == true} " ng-repeat="point in points">
@@ -87,6 +88,10 @@
                       <span ng-if="point.record">
                         <i class="fa fa-trophy"></i>
                       </span>
+                    </td>
+                    <td>
+                      <a href="#" ui-sref="point-edit({id:point.id})" class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></a>
+                      <button ng-click="deletePoint(point.id)" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button>
                     </td>
                   </tr>
                 </tbody>
