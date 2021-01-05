@@ -1,25 +1,34 @@
-# basketfire
+# Basketfire
 
-Configurações do Frontend
+### Configurações do Backend
 
-> Ajustar a endpoint no arquivo 'lib/js/app.js' na linha 7
+**Tecnologias**
+- Eloquent ORM
+- Slim Framework 2
+- Estrutura MVC
 
-Login: james@james.com
-Senha: 123
+**Requisitos**
+- PHP 7.3.9
+- MySQL: 5.7.26
 
-Configurações do Backend PHP
+**Ajustes**
+- Setar se esta em modo Produção (true) ou Desenvolvimento (false) no arquivo  linha 11 no arquivo **bootstrap.php**.
 
-Requisitos:
-> PHP 7.3.9
-> MySQL: 5.7.26
+- Ajustar os dados de conexão do banco de dados nas linhas 33 a 36 (Produção) ou 45 a 48 (Desenvolvimento) no arquivo **bootstrap.php**.
 
-Editar o arquivo bootstrap.php:
+### Configurações do Frontend
 
-> Setar se estao em modo produção (true) ou desenvolvimento (false) na linha 11
-> Ajustar os dados do banco de dados nas linhas 33 a 36 (Produção) ou 45 a 48 (Desenvolvimento).
+- Ajustar a endpoint no arquivo 'lib/js/app.js' na linha 7.
 
-Executar o Frontend em um servidor Apache/Nginx.
+- Executar o Frontend em um servidor Apache/Nginx.
 
-Banco de Dados
+### Configurações do Banco de Dados
 
-> O arquivo db.sql se encontra no caminho '/backend/database/db.sql'
+- O arquivo db.sql se encontra no caminho **backend/database/db.sql**.
+
+### Projeto Online
+
+- [https://ambientnegocios.com/basketfire](https://ambientnegocios.com/basketfire)
+
+- Login: james@james.com
+- Senha: 123
